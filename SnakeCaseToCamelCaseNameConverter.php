@@ -1,8 +1,6 @@
 <?php
 
-namespace Destination\NameConverter;
-
-use Palmtree\NameConverter\NameConverterInterface;
+namespace Palmtree\NameConverter;
 
 class SnakeCaseToCamelCaseNameConverter implements NameConverterInterface
 {
