@@ -6,5 +6,5 @@ interface NameConverterInterface
 {
     public function normalize($input);
 
-    public function denormalize($output);
+    public function denormalize($input);
 }
