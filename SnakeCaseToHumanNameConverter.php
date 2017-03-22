@@ -2,12 +2,15 @@
 
 namespace Palmtree\NameConverter;
 
-class SnakeCaseToHumanNameConverter {
-	public function normalize( $propertyName ) {
-		return ucwords( trim( str_replace( '_', ' ', $propertyName ) ) );
-	}
+class SnakeCaseToHumanNameConverter implements NameConverterInterface
+{
+    public function normalize($input)
+    {
+        return ucwords(trim(str_replace('_', ' ', $input)));
+    }
 
-	public function denormalize( $propertyName ) {
-		return strtolower( str_replace( ' ', '_', $propertyName ) );
-	}
+    public function denormalize($input)
+    {
+        return strtolower(str_replace(' ', '_', $input));
+    }
 }
