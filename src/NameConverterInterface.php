@@ -4,7 +4,7 @@ namespace Palmtree\NameConverter;
 
 interface NameConverterInterface
 {
-    public function normalize($input);
+    public function normalize(string $input): string;
 
-    public function denormalize($input);
+    public function denormalize(string $input): string;
 }

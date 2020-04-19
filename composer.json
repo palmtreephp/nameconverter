@@ -9,7 +9,9 @@
             "email": "andy@andypalmer.me"
         }
     ],
-    "require": {},
+    "require": {
+        "php": ">=7.1"
+    },
     "autoload": {
         "psr-4": {
             "Palmtree\\NameConverter\\": "src"

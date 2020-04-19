@@ -6,24 +6,16 @@ class SnakeCaseToCamelCaseNameConverter implements NameConverterInterface
 {
     /**
      * Converts a string like 'my_input' to 'myInput'.
-     *
-     * @param string $input
-     *
-     * @return string
      */
-    public function normalize($input)
+    public function normalize(string $input): string
     {
         return lcfirst(str_replace('_', '', ucwords($input, '_')));
     }
 
     /**
      * Converts a string like 'myInput' to 'my_input'.
-     *
-     * @param $input
-     *
-     * @return string
      */
-    public function denormalize($input)
+    public function denormalize(string $input): string
     {
         $lcPropertyName = lcfirst($input);
         $snakeCasedName = '';
