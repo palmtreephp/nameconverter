@@ -18,7 +18,7 @@ class SnakeCaseToCamelCaseNameConverter implements NameConverterInterface
     }
 
     /**
-     * Converts a string like 'my_input' to 'myInput'
+     * Converts a string like 'my_input' to 'myInput'.
      *
      * @param string $input
      *
@@ -32,7 +32,7 @@ class SnakeCaseToCamelCaseNameConverter implements NameConverterInterface
     }
 
     /**
-     * Converts a string like 'myInput' to 'my_input'
+     * Converts a string like 'myInput' to 'my_input'.
      *
      * @param $input
      *
@@ -43,7 +43,7 @@ class SnakeCaseToCamelCaseNameConverter implements NameConverterInterface
         $lcPropertyName = lcfirst($input);
         $snakeCasedName = '';
 
-        $len = strlen($lcPropertyName);
+        $len = \strlen($lcPropertyName);
         for ($i = 0; $i < $len; ++$i) {
             if (ctype_upper($lcPropertyName[$i])) {
                 $snakeCasedName .= '_' . strtolower($lcPropertyName[$i]);

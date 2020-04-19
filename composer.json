@@ -1,18 +1,24 @@
 {
-  "name": "palmtree/nameconverter",
-  "description": "NameConverter component for Palmtree PHP",
-  "type": "library",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Andy Palmer",
-      "email": "andy@andypalmer.me"
+    "name": "palmtree/nameconverter",
+    "description": "NameConverter component for Palmtree PHP",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andy Palmer",
+            "email": "andy@andypalmer.me"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Palmtree\\NameConverter\\": "src"
+        }
+    },
+    "require-dev": {
+        "palmtree/php-cs-fixer-config": "^1.0"
+    },
+    "scripts": {
+        "fix": "vendor/bin/php-cs-fixer fix --diff"
     }
-  ],
-  "require": {},
-  "autoload": {
-    "psr-4": {
-      "Palmtree\\NameConverter\\": "src"
-    }
-  }
 }
