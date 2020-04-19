@@ -5,19 +5,6 @@ namespace Palmtree\NameConverter;
 class SnakeCaseToCamelCaseNameConverter implements NameConverterInterface
 {
     /**
-     * @var bool
-     */
-    private $lowerCamelCase;
-
-    /**
-     * @param bool $lowerCamelCase Use lowerCamelCase style
-     */
-    public function __construct(array $attributes = null, $lowerCamelCase = true)
-    {
-        $this->lowerCamelCase = $lowerCamelCase;
-    }
-
-    /**
      * Converts a string like 'my_input' to 'myInput'.
      *
      * @param string $input
@@ -26,9 +13,7 @@ class SnakeCaseToCamelCaseNameConverter implements NameConverterInterface
      */
     public function normalize($input)
     {
-        $output = lcfirst(str_replace('_', '', ucwords($input, '_')));
-
-        return $output;
+        return lcfirst(str_replace('_', '', ucwords($input, '_')));
     }
 
     /**
