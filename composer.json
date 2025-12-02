@@ -17,10 +17,17 @@
             "Palmtree\\NameConverter\\": "src"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Palmtree\\NameConverter\\Tests\\": "tests"
+        }
+    },
     "require-dev": {
-        "palmtree/php-cs-fixer-config": "^2.1"
+        "palmtree/php-cs-fixer-config": "^2.1",
+        "phpunit/phpunit": "^12.4"
     },
     "scripts": {
-        "fix": "vendor/bin/php-cs-fixer fix --diff"
+        "fix": "@php vendor/bin/php-cs-fixer fix --diff",
+        "test": "@php vendor/bin/phpunit"
     }
 }
