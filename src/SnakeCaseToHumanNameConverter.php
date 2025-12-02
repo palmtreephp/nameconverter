@@ -13,6 +13,6 @@ class SnakeCaseToHumanNameConverter implements NameConverterInterface
 
     public function denormalize(string $input): string
     {
-        return strtolower(str_replace(' ', '_', $input));
+        return strtolower(str_replace(' ', '_', trim($input)));
     }
 }
