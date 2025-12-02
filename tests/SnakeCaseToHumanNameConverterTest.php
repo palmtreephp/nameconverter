@@ -31,6 +31,9 @@ class SnakeCaseToHumanNameConverterTest extends TestCase
         $this->assertSame($expected, $result);
     }
 
+    /**
+     * @return array<string, array{0: string, 1: string}>
+     */
     public static function normalizeDataProvider(): array
     {
         return [
@@ -43,6 +46,9 @@ class SnakeCaseToHumanNameConverterTest extends TestCase
         ];
     }
 
+    /**
+     * @return array<string, array{0: string, 1: string}>
+     */
     public static function denormalizeDataProvider(): array
     {
         return [

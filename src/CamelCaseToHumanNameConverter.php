@@ -10,7 +10,8 @@ class CamelCaseToHumanNameConverter implements NameConverterInterface
     {
         // Insert spaces before uppercase letters and trim
         $spaced = preg_replace('/([A-Z])/', ' $1', $input);
-        return ucwords(trim($spaced));
+
+        return ucwords(trim((string)$spaced));
     }
 
     public function denormalize(string $input): string
@@ -21,7 +22,7 @@ class CamelCaseToHumanNameConverter implements NameConverterInterface
         foreach ($words as $word) {
             $result .= ucfirst(strtolower($word));
         }
+
         return $result;
     }
 }
-

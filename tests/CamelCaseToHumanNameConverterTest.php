@@ -17,6 +17,7 @@ class CamelCaseToHumanNameConverterTest extends TestCase
         $this->converter = new CamelCaseToHumanNameConverter();
     }
 
+
     #[DataProvider('normalizeDataProvider')]
     public function testNormalize(string $input, string $expected): void
     {
@@ -31,6 +32,9 @@ class CamelCaseToHumanNameConverterTest extends TestCase
         $this->assertSame($expected, $result);
     }
 
+    /**
+     * @return array<string, array{0: string, 1: string}>
+     */
     public static function normalizeDataProvider(): array
     {
         return [
@@ -44,6 +48,9 @@ class CamelCaseToHumanNameConverterTest extends TestCase
         ];
     }
 
+    /**
+     * @return array<string, array{0: string, 1: string}>
+     */
     public static function denormalizeDataProvider(): array
     {
         return [
